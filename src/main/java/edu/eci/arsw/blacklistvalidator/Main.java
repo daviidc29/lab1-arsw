@@ -5,19 +5,29 @@
  */
 package edu.eci.arsw.blacklistvalidator;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+
+import edu.eci.arsw.spamkeywordsdatasource.HostBlacklistsDataSourceFacade;
 
 /**
  *
- * @author hcadavid
+ * @author David
  */
 public class Main {
     
-    public static void main(String a[]){
+    public static void main(String args[]){
         HostBlackListsValidator hblv=new HostBlackListsValidator();
-        List<Integer> blackListOcurrences=hblv.checkHost("200.24.34.55");
-        System.out.println("The host was found in the following blacklists:"+blackListOcurrences);
+
+        List<Integer> blackListOcurrences2=hblv.checkHost("212.24.24.55",100);
+        System.out.println("The host was found in the following blacklists 2:"+blackListOcurrences2);
+
         
     }
+        
+
+        
+    
     
 }
